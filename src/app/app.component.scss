@@ -35,3 +35,20 @@
     font-family: 'Roboto Slab', serif;
   }
 }
+
+.main {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 10px;
+}
+
+.card {
+  width: 870px;
+
+  background-color: var(--background-card-color);
+
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: var(--box-shadow);
+}

@@ -1,6 +1,9 @@
 :root {
   --background-top-overlay-color: rgba(35, 80, 93, 0.7);
+  --background-color: #ededed;
   --title-page-color: #ffffff;
+  --background-card-color: #ffffff;
+  --box-shadow: 0px 1px 1.5px rgba(9,10,10,0.2);
 }
 
 * {
@@ -10,6 +13,6 @@
 }
 
 body {
-  background-color: #ededed;
+  background-color: var(--background-color);
   font-family: 'Roboto', sans-serif;
 }

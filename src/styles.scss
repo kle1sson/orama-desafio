@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --background-top-overlay-color: rgba(35, 80, 93, 0.7);
+  --title-page-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ededed;
+  font-family: 'Roboto', sans-serif;
+}

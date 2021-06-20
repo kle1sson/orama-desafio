@@ -7,7 +7,7 @@ import {
 
 import { SliderComponent } from './slider.component';
 import { FormsModule } from '@angular/forms';
-import { BackgroundPercentagePipe } from 'src/app/pipes/background-percentage.pipe';
+import { BackgroundPercentagePipe } from 'src/app/pipes/background-percentage/background-percentage.pipe';
 
 describe('SliderComponent', () => {
   let component: SliderComponent;

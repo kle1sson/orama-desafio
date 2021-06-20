@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { AppComponent } from './app.component';
-import { BackgroundPercentagePipe } from './pipes/background-percentage.pipe';
+import { BackgroundPercentagePipe } from './pipes/background-percentage/background-percentage.pipe';
 
 @NgModule({
   declarations: [

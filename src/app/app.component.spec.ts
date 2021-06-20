@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 import { SliderComponent } from './components/slider/slider.component';
-import { BackgroundPercentagePipe } from './pipes/background-percentage.pipe';
+import { BackgroundPercentagePipe } from './pipes/background-percentage/background-percentage.pipe';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

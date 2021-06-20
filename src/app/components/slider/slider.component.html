@@ -1,0 +1,16 @@
+<section class="filter">
+  <form class="filter__form">
+    <label class="filter__label">{{ label }}</label>
+    <input
+      type="range"
+      name="range-filter"
+      class="filter__input"
+      [min]="min"
+      [max]="max"
+      [ngStyle]="{ 'background-size': rangeValue | backgroundPercentage: max }"
+      [(ngModel)]="rangeValue"
+      (input)="onChangeValue()"
+    />
+  </form>
+  <span class="filter__value">Até {{ value }}</span>
+</section>

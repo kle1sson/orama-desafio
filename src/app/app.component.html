@@ -5,5 +5,22 @@
 <main class="main">
   <section class="card">
     <app-search></app-search>
+    <section class="filters">
+      <app-slider
+        (valueChange)="getValueSlider($event)"
+        label="Aplicação miníma"
+        [min]="minimumApplicationValue.min"
+        [max]="minimumApplicationValue.max"
+        value="R$500.000,00"
+      ></app-slider>
+
+      <app-slider
+        (valueChange)="getValueSlider($event)"
+        label="Prazo de resgate"
+        [min]="retrievalDaysValue.min"
+        [max]="retrievalDaysValue.max"
+        value="270 dias úteis"
+      ></app-slider>
+    </section>
   </section>
 </main>

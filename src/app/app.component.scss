@@ -1,4 +1,4 @@
-@import '~foundation-sites/scss/util/unit';
+@import "~foundation-sites/scss/util/unit";
 
 .page-header {
   height: rem-calc(320);
@@ -10,11 +10,15 @@
   text-align: center;
   color: var(--title-page-color);
 
-  background: linear-gradient(0deg, var(--background-top-overlay-color),
-              var(--background-top-overlay-color)),
-              url('../assets/background-top.png') no-repeat center;
+  background: linear-gradient(
+      0deg,
+      var(--background-top-overlay-color),
+      var(--background-top-overlay-color)
+    ),
+    url("../assets/background-top.png") no-repeat center;
 
-  .page-header__title, .page-header__description {
+  .page-header__title,
+  .page-header__description {
     font-weight: 400;
   }
 
@@ -22,7 +26,7 @@
     // Fallback if browser doesn't support clamp
     font-size: calc(1vw + 0.6rem);
     font-size: clamp(1.3rem, 1.2vw, 2rem);
-  
+
     position: relative;
     top: rem-calc(50);
   }
@@ -32,7 +36,7 @@
     font-size: calc(1vw + 1.2rem);
     font-size: clamp(2rem, 2.3vw, 4rem);
 
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
   }
 }
 
@@ -51,4 +55,13 @@
   padding: 20px;
   margin-top: 20px;
   box-shadow: var(--box-shadow);
+}
+
+.filters {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  padding: 20px;
 }

@@ -54,7 +54,18 @@
 
   padding: 20px;
   margin-top: 20px;
+
   box-shadow: var(--box-shadow);
+
+  border-radius: 3px;
+  .time-limit {
+    display: block;
+    margin-top: 20px;
+
+    font-size: 11px;
+    color: #8d8d8d;
+    font-weight: 400;
+  }
 }
 
 .filters {

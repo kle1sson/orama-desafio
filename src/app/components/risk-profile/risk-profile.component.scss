@@ -1,0 +1,82 @@
+$breakpoint-cell: 550px;
+$height-risk-line: 12px;
+
+.risk-section,
+.risk-wrapper,
+.risk-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.risk-section {
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  @media only screen and (max-width: $breakpoint-cell) {
+    display: none;
+  }
+
+  .risk-section__title {
+    font-size: 14px;
+    color: #444444;
+    font-weight: 700;
+  }
+
+  .risk-wrapper {
+    align-items: flex-end;
+
+    span {
+      font-size: 11px;
+      color: #444444;
+      line-height: 30px;
+    }
+  }
+}
+
+.risk-filter {
+  align-items: flex-end;
+
+  padding: 5px 5px 0 5px;
+  margin: 5px 5px 0 5px;
+
+  .risk-filter__level {
+    cursor: pointer;
+
+    .risk-filter__bar {
+      width: 7px;
+      margin-left: 5px;
+    }
+
+    .risk-filter__line {
+      border-bottom: 1px solid black;
+      height: $height-risk-line;
+    }
+
+    .active-risk__line {
+      border: 6px solid transparent;
+      border-bottom-color: black;
+
+      position: relative;
+      left: 2.5px;
+    }
+
+    .active-risk__bar {
+      margin-bottom: $height-risk-line;
+    }
+  }
+}
+
+@for $level from 1 through 12 {
+  .level-#{$level} {
+    .risk-filter__bar {
+      background-color: var(--risk-level-#{$level}-color);
+    }
+
+    @if $level == 1 {
+      .risk-filter__line {
+        border-left: 1px solid black;
+      }
+    }
+  }
+}

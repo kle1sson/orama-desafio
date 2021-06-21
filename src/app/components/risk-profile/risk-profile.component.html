@@ -1,0 +1,29 @@
+<section class="risk-section">
+  <h2 class="risk-section__title">Perfil de risco do fundo</h2>
+  <div class="risk-wrapper">
+    <span>menor</span>
+    <div class="risk-filter">
+      <div
+        class="risk-filter__level level-{{ level }}"
+        *ngFor="let level of levels"
+        (mouseenter)="setLevelActive(level)"
+        (mouseleave)="setLevelActive(maxLevel)"
+        (click)="onChangeValue(level)"
+      >
+        <div
+          [ngStyle]="{ height: level | calcHeight }"
+          class="risk-filter__bar"
+          [class.active-risk__bar]="validate(level, levelActive, 'greater')"
+        ></div>
+
+        <div
+          [ngClass]="{
+            'active-risk__line': validate(level, levelActive, 'equal'),
+            'risk-filter__line': validate(level, levelActive, 'lesser')
+          }"
+        ></div>
+      </div>
+    </div>
+    <span>maior</span>
+  </div>
+</section>

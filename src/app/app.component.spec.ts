@@ -3,6 +3,8 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { BackgroundPercentagePipe } from './pipes/background-percentage/background-percentage.pipe';
+import { RiskProfileComponent } from './components/risk-profile/risk-profile.component';
+import { CalcHeightPipe } from './pipes/calc-height/calc-height.pipe';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -12,6 +14,8 @@ describe('AppComponent', () => {
         SearchComponent,
         SliderComponent,
         BackgroundPercentagePipe,
+        CalcHeightPipe,
+        RiskProfileComponent,
       ],
     }).compileComponents();
   });

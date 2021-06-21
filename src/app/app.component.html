@@ -13,7 +13,9 @@
         [max]="minimumApplicationValue.max"
         value="R$500.000,00"
       ></app-slider>
-
+      <app-risk-profile
+        (valueChange)="getValueSlider($event)"
+      ></app-risk-profile>
       <app-slider
         (valueChange)="getValueSlider($event)"
         label="Prazo de resgate"

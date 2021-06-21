@@ -1,0 +1,125 @@
+<table class="funds">
+  <thead class="funds__head">
+    <tr>
+      <th>
+        <p>Fundo</p>
+      </th>
+      <th>
+        <p>Data da cota</p>
+      </th>
+      <th>
+        <p>Mês (%)</p>
+      </th>
+      <th>
+        <p>2016 (%)</p>
+      </th>
+      <th>
+        <p>12 M (%)</p>
+      </th>
+      <th>
+        <p>Aplicação mínima (R$)</p>
+      </th>
+      <th>
+        <p>Prazo do resgate</p>
+      </th>
+      <th>
+        <p>Aplicar</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="funds__macro-strategy">
+      <td colspan="8">Renda Fixa</td>
+    </tr>
+    <tr *ngFor="let fund of fixedIncome" class="funds__line">
+      <td class="funds__information">
+        <div class="funds__line--border-risk-{{ fund.fundRiskProfile }}"></div>
+
+        <div class="funds__specification">
+          <p class="funds__name">{{ fund.simpleName }}</p>
+          <span class="funds__type">
+            {{ fund.fundType }} | {{ fund.fundClass }}
+          </span>
+        </div>
+      </td>
+      <td class="funds__quota-date">{{ fund.quotaDate | formatDate }}</td>
+      <td class="funds__month">{{ fund.rentabilityMonth | percentage }}</td>
+      <td class="funds__year">{{ fund.rentabilityYear | percentage }}</td>
+      <td class="funds__m12">{{ fund.rentabilityM12 | percentage }}</td>
+      <td class="funds__minimum-application">
+        {{ fund.minimumApplication | formatMoney }}
+      </td>
+      <td class="funds__retrieval-quotation">
+        {{ fund.retrievalQuotationDays | retrievalQuotationFormat }}
+      </td>
+      <td class="funds__icon">
+        <div>
+          <img src="../../../assets/arrow.svg" />
+        </div>
+      </td>
+    </tr>
+
+    <tr class="funds__macro-strategy">
+      <td colspan="8">Estratégia Mista</td>
+    </tr>
+
+    <tr *ngFor="let fund of mixedStrategy" class="funds__line">
+      <td class="funds__information">
+        <div class="funds__line--border-risk-{{ fund.fundRiskProfile }}"></div>
+
+        <div class="funds__specification">
+          <p class="funds__name">{{ fund.simpleName }}</p>
+          <span class="funds__type">
+            {{ fund.fundType }} | {{ fund.fundClass }}
+          </span>
+        </div>
+      </td>
+      <td class="funds__quota-date">{{ fund.quotaDate | formatDate }}</td>
+      <td class="funds__month">{{ fund.rentabilityMonth | percentage }}</td>
+      <td class="funds__year">{{ fund.rentabilityYear | percentage }}</td>
+      <td class="funds__m12">{{ fund.rentabilityM12 | percentage }}</td>
+      <td class="funds__minimum-application">
+        {{ fund.minimumApplication | formatMoney }}
+      </td>
+      <td class="funds__retrieval-quotation">
+        {{ fund.retrievalQuotationDays | retrievalQuotationFormat }}
+      </td>
+      <td class="funds__icon">
+        <div>
+          <img src="../../../assets/arrow.svg" />
+        </div>
+      </td>
+    </tr>
+
+    <tr class="funds__macro-strategy">
+      <td colspan="8">Renda Variável</td>
+    </tr>
+    <tr *ngFor="let fund of variableIncome" class="funds__line">
+      <td class="funds__information">
+        <div class="funds__line--border-risk-{{ fund.fundRiskProfile }}"></div>
+
+        <div class="funds__specification">
+          <p class="funds__name">{{ fund.simpleName }}</p>
+          <span class="funds__type">
+            {{ fund.fundType }} | {{ fund.fundClass }}
+          </span>
+        </div>
+      </td>
+      <td class="funds__quota-date">{{ fund.quotaDate | formatDate }}</td>
+      <td class="funds__month">{{ fund.rentabilityMonth | percentage }}</td>
+      <td class="funds__year">{{ fund.rentabilityYear | percentage }}</td>
+      <td class="funds__m12">{{ fund.rentabilityM12 | percentage }}</td>
+      <td class="funds__minimum-application">
+        {{ fund.minimumApplication | formatMoney }}
+      </td>
+      <td class="funds__retrieval-quotation">
+        {{ fund.retrievalQuotationDays | retrievalQuotationFormat }}
+      </td>
+      <td class="funds__icon">
+        <div>
+          <img src="../../../assets/arrow.svg" />
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

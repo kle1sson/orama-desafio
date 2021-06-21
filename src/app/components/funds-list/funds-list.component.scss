@@ -1,0 +1,119 @@
+@import "~foundation-sites/scss/util/color";
+
+.funds {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.funds__head {
+  p {
+    font-size: 13px;
+    color: #444444;
+    font-weight: 700;
+    font-family: "Roboto";
+    height: 75px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  th:first-child p:first-child {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+}
+
+.funds__macro-strategy {
+  height: 47px;
+  background-color: #ededed;
+
+  td {
+    font-size: 13px;
+    color: #444444;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px;
+  }
+}
+
+.funds__line {
+  height: 65px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+
+  &:hover {
+    $color: #ffffff;
+    background-color: smart-scale($color);
+  }
+
+  .funds__type {
+    font-size: 11px;
+    color: #9d9d9d;
+  }
+
+  .funds__information,
+  .funds__quota-date,
+  .funds__month,
+  .funds__year,
+  .funds__m12,
+  .funds__minimum-application,
+  .funds__retrieval-quotation,
+  .funds__icon {
+    font-size: 13px;
+    color: #444444;
+    padding: 0px 15px;
+    text-align: center;
+  }
+
+  .funds__month,
+  .funds__year,
+  .funds__m12 {
+    width: 80px;
+  }
+
+  .funds__information {
+    text-align: left;
+
+    .funds__specification {
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  .funds__icon {
+    div {
+      cursor: pointer;
+
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+
+      background-color: #60aabf;
+    }
+
+    img {
+      width: 40%;
+    }
+  }
+}
+
+@for $level from 1 through 12 {
+  .funds__line--border-risk-#{$level} {
+    float: left;
+    position: relative;
+    right: 15px;
+
+    width: 7px;
+    height: 90px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--risk-level-#{$level}-color);
+  }
+}
